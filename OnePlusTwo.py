@@ -56,7 +56,7 @@ def ConfirmSign():
         logging.log('','')
         print e
         pass
-#This function checks whether the process is succssful or not.
+#This function checks whether the process is successful or not.
 def SuccessOrFailure():
     if browser.is_element_present_by_id('totalInvited', wait_time=15):
         print '--successful run:' + str(j)
