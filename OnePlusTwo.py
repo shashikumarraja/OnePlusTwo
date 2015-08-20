@@ -5,6 +5,7 @@ from splinter import Browser
 import time
 import logging
 
+#This function opens the one plus site in one browser and temporary email generating site in another browser.
 def ConnectionSetup():
     global browser
     browser = Browser()
@@ -19,7 +20,7 @@ def OnePlus():
     if browser.is_element_present_by_id('email', wait_time=15):
         browser.find_by_id('email').click()
         print '--found email text box'
-        browser.type('invite-email', email, slowly=True)
+        browser.fill('invite-email', email)
         print '--entered email id'
 
         if browser.is_element_present_by_id('submit_email', wait_time=15):
